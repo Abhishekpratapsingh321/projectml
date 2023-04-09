@@ -21,4 +21,5 @@ PyYAML
 scikit-learn
 apache-airflow
 dill
+catboost
 -e .
