@@ -29,8 +29,8 @@ class DataTransformation:
         :return:
         '''
         try:
-            numerical_columns = ["writing score","reading score"]
-            categorical_feature = ["gender","race/ethnicity","parental level of education","lunch","test preparation course",]
+            numerical_columns = ["writing_score","reading_score"]
+            categorical_feature = ["gender","race_ethnicity","parental_level_of_education","lunch","test_preparation_course",]
             num_pipeline = Pipeline(
                 steps=[("imputer",SimpleImputer(strategy= "median")),
                        ("scaler",StandardScaler())
@@ -68,7 +68,7 @@ class DataTransformation:
             logging.info("obtaining preprocessing object")
 
             preprocessor_obj = self.get_data_transformer_obj()
-            target_column_name = "math score"
+            target_column_name = "math_score"
             numerical_columns = ["writing score","reading score"]
 
             input_feature_train_df = train_df.drop(columns=[target_column_name], axis=1)
